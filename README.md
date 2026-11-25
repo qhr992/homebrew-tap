@@ -23,7 +23,7 @@ Remove it with `brew uninstall --cask omnihub`, or `brew uninstall --zap --cask 
 
 ## Updating the cask
 
-OmniHub's own release step does this: once a version's dmg is on GitHub, its `Tools/update-cask.sh` (also run at the end of `Tools/package.sh`) points the cask at it, checking the dmg is the one built locally, and commits and pushes here.
+OmniHub's own release step does this: once a version's dmg is on GitHub, its `Tools/update-cask.sh` (also run at the end of `Tools/package.sh`) points the cask at it, checking the dmg is the one built locally, and merges the change here through a pull request (`main` only takes pull requests).
 
 By hand, after an OmniHub release:
 
@@ -32,4 +32,4 @@ scripts/bump-omnihub.sh          # the latest release
 scripts/bump-omnihub.sh 1.8.6    # or a given version
 ```
 
-It downloads the release's dmg, takes its SHA-256 and writes both into `Casks/omnihub.rb`; then commit and push.
+It downloads the release's dmg, takes its SHA-256 and writes both into `Casks/omnihub.rb`; then commit on a branch and open a pull request.
