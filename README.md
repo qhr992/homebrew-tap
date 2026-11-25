@@ -23,7 +23,9 @@ Remove it with `brew uninstall --cask omnihub`, or `brew uninstall --zap --cask 
 
 ## Updating the cask
 
-After an OmniHub release:
+OmniHub's own release step does this: once a version's dmg is on GitHub, its `Tools/update-cask.sh` (also run at the end of `Tools/package.sh`) points the cask at it, checking the dmg is the one built locally, and commits and pushes here.
+
+By hand, after an OmniHub release:
 
 ```bash
 scripts/bump-omnihub.sh          # the latest release
