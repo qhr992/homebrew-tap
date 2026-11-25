@@ -19,9 +19,8 @@ cask "omnihub" do
 
   # Releases are signed with a self-signed certificate and not notarised,
   # so Gatekeeper would refuse the first launch of a quarantined copy.
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/OmniHub.app"]
+  postflight_steps do
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/OmniHub.app"]
   end
 
   uninstall quit: "com.local.omnihub"
