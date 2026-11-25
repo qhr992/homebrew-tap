@@ -1,6 +1,6 @@
 cask "omnihub" do
-  version "1.9.0"
-  sha256 "451507a1f8845b83a1a102ac95ae5398bc3b95476e8f76498077bdfff1378e28"
+  version "1.10.0"
+  sha256 "3cca866335365ac8bd52442614fceb61723e0528e261f83f12159ed2cd42ae41"
 
   url "https://github.com/qhr992/OmniHub/releases/download/v#{version}/OmniHub-#{version}.dmg"
   name "OmniHub"
